@@ -23,22 +23,27 @@ SELECT now():: time;
 
 --- first time stamp and second date format many format go to google
 SELECT to_char(now(),'yyyy/mm/dd')
-![alt text](image-1.png)
+
 
 ```
-
+![alt text](image-1.png)
 In PostgreSQL, the INTERVAL data type is used to store a duration or time span — for example, days, hours, minutes, and seconds. It’s commonly used when you want to add or subtract time to/from a timestamp or date.
 ```sql
 SELECT CURRENT_DATE - INTERVAL '1 year 2 month';
 
 SELECT now() + INTERVAL '7 days';
----- age function
-  SELECT age (CURRENT_DATE,'02-06-2002')
-  ![alt text](image-2.png)
+
   
  SELECT *,age(CURRENT_DATE,dob) from students;
-  ![alt text](image-3.png)
+
 ```
+  ![alt text](image-3.png)
+```sql
+---- age function
+  SELECT age (CURRENT_DATE,'02-06-2002')
+  
+  ```
+  ![alt text](image-2.png)
 # extract function
 ```sql
 --- day ,year ,month find out
