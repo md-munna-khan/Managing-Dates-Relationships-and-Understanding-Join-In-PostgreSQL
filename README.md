@@ -125,3 +125,16 @@ INSERT INTO post (title, user_id) VALUES('test',NULL)
 - all function value add in foreign key 
 ![alt text](image-10.png)
 ![alt text](image-9.png)
+
+## 9-6 Joining Tables with Inner Join
+- inner join
+```sql
+SELECT title,username FROM post
+join "user" on post.user_id = "user".id;
+```
+```sql
+--- rename 
+SELECT p.id FROM post p
+join "user" u on p.user_id = u.id;
+```
+![alt text](image-11.png)
