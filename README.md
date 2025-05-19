@@ -112,3 +112,16 @@ INSERT INTO post (title, user_id) VALUES('test',1)
 -- Attempting to insert a post without specifying a user ID
 INSERT INTO post (title, user_id) VALUES('test',NULL)
 ```
+
+## 9-5 Enforcing Referential Integrity: Behaviors During Data Deletion
+
+ 
+-- Deletion constraint on DELETE user
+-- Restrict Deletion -> ON DELETE RESTRICT / ON DELETE NO ACTION (default)
+-- Cascading Deletion -> ON DELETE CASCADE
+-- Setting NULL -> ON DELETE SET NULL
+-- Set Default value -> ON DELETE SET DEFAULT
+
+- all function value add in foreign key 
+![alt text](image-10.png)
+![alt text](image-9.png)
