@@ -30,6 +30,30 @@ DROP Table "user";
 SELECT * from "user";
 SELECT * from post;
 
--- rename shortcut
-SELECT p.id FROM post p
-join "user" u on p.user_id = u.id;
+
+SELECT * FROM "user"
+join post on post.user_id = "user".id;
+-- first call column show first
+SELECT * FROM post
+join "user" on post.user_id = "user".id;
+
+INSERT INTO post (id,title, user_id) VALUES
+(5,'this is test post', NULL);
+
+-- left join
+SELECT * FROM post
+left join "user" on post.user_id = "user".id;
+
+SELECT * FROM "user"
+left join post on post.user_id = "user".id;
+
+--- Right JOin
+SELECT * FROM "user"
+RIGHT   outer join post on post.user_id = "user".id;
+
+SELECT * FROM post
+RIGHT  outer  join "user" on post.user_id = "user".id;
+
+--- full join
+SELECT * FROM post
+FULL  outer  join "user" on post.user_id = "user".id;

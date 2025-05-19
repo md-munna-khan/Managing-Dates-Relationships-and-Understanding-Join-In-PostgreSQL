@@ -138,3 +138,38 @@ SELECT p.id FROM post p
 join "user" u on p.user_id = u.id;
 ```
 ![alt text](image-11.png)
+
+## 9-7 Understanding Left and Right Joins
+```sql
+-- first call column show first
+SELECT * FROM "user"
+join post on post.user_id = "user".id;
+
+SELECT * FROM post
+join "user" on post.user_id = "user".id;
+```
+```sql
+
+-- left join priority left table
+SELECT * FROM post
+left join "user" on post.user_id = "user".id;
+
+SELECT * FROM "user"
+left join post on post.user_id = "user".id;
+
+--- Right JOin priority left table
+SELECT * FROM "user"
+RIGHT outer join post on post.user_id = "user".id;
+
+SELECT * FROM post
+RIGHT outer join "user" on post.user_id = "user".id;
+```
+## 9-8 Exploring Full, Cross, and Natural Joins
+```sql
+---cross join-------
+SELECT * FROM employees
+CROSS JOIN departments;
+---natural join must be in 2 table one common column-------
+SELECT * FROM employees
+NATURAL JOIN departments;
+```
