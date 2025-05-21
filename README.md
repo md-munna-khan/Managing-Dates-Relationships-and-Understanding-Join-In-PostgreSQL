@@ -58,7 +58,7 @@ GROUP BY country;
 
 SELECT country,avg(age) FROM students
 GROUP BY country
-HAVING avg(age) >20;
+HAVING avg(age) >20;  
 --- count student Born in Each Year
 SELECT extract(year from dob) as birth_year, count(*)
 from students
